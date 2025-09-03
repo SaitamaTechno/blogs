@@ -1,0 +1,20 @@
+@keyframes pulse {
+  0%   { transform: scale(1); background-color: #3498db; }
+  50%  { transform: scale(1.1); background-color: #5dade2; }
+  100% { transform: scale(1); background-color: #3498db; }
+}
+
+#root > div > form > button {
+  transition: background 0.25s ease, transform 0.15s ease;
+  border: none;
+  cursor: pointer;
+}
+#root > div > form > button:hover {
+  color:#3498db;
+  background: #e04344;
+  transform: translateY(+2px);
+}
+
+#root > div > form > button:active {
+  transform: translateY(+10px);
+}

@@ -1,0 +1,51 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  padding: 5px 15px; /* Reduced vertical padding */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  padding-left: 50px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500; /* Slightly lighter font weight */
+  padding: 6px 12px; /* Reduced padding for thinner boxes */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Thinner border */
+  border-radius: 4px;
+  margin: 0 5px; /* Reduced margin */
+  transition: all 0.2s ease;
+  display: inline-block;
+  font-size: 1rem; /* Slightly smaller font */
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+  transform: translateY(-1px); /* Smaller hover movement */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Smaller shadow */
+}
+
+/* For active link */
+.navbar a.active {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 8px; /* Reduced padding on mobile */
+  }
+  
+  .navbar a {
+    margin: 3px 0; /* Reduced margin on mobile */
+    width: 100%;
+    text-align: center;
+    padding: 5px 10px; /* Slightly reduced padding on mobile */
+  }
+}

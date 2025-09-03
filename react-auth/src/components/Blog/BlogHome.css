@@ -1,0 +1,321 @@
+.pagination {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically if container has height */
+}
+.container {
+  display: flex;
+  justify-content: center; /* horizontal */
+  align-items: center;     /* vertical */
+}
+/* BlogHome.css - Add these styles */
+
+.tabs-container {
+  display: flex;
+  margin-bottom: 1px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tab {
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  color: #333;
+}
+
+.tab.active {
+  color: #007bff;
+  font-weight: 600;
+}
+
+.tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #007bff;
+}
+
+.no-posts {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+  font-style: italic;
+}
+.titleContainer {
+  text-align: center;
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  justify-content: center; /* horizontal (now affects cross-axis) */
+  align-items: center;     /* vertical (now affects main-axis) */
+}
+/* Filter Dropdown Styles */
+.filter-dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: auto;
+}
+
+.filter-toggle {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  background-color: #4361ee;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.filter-toggle:hover {
+  background-color: #3a56d4;
+}
+
+.filter-icon {
+  font-size: 14px;
+}
+
+.dropdown-arrow {
+  transition: transform 0.3s ease;
+  font-size: 12px;
+}
+
+.dropdown-arrow.open {
+  transform: rotate(180deg);
+}
+
+.filter-options {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 140px;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.filter-option {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  text-align: left;
+  border: none;
+  background: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 14px;
+  color: #333;
+}
+
+.filter-option:hover {
+  background-color: #f0f2f5;
+}
+
+.filter-option.active {
+  background-color: #e6eeff;
+  color: #4361ee;
+  font-weight: 500;
+}
+
+/* Title container layout */
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 0;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.title h1 {
+  margin: 0;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .titleContainer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .filter-dropdown {
+    width: 100%;
+  }
+  
+  .filter-toggle {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .filter-options {
+    width: 100%;
+    right: 0;
+    left: 0;
+  }
+}
+
+/* BlogPostsGrid.css */
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.post-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.2s, box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.post-card h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+}
+
+.post-card h4 a {
+  color: #2c3e50;
+  text-decoration: none;
+}
+
+.post-card h4 a:hover {
+  color: #3498db;
+  text-decoration: underline;
+}
+
+.post-content-preview {
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+  color: #555;
+  line-height: 1.4;
+}
+
+.post-content-preview a {
+  color: #555;
+  text-decoration: none;
+}
+
+.post-content-preview a:hover {
+  color: #3498db;
+  text-decoration: underline;
+}
+
+.post-date {
+  color: #7f8c8d;
+  font-size: 0.85rem;
+  margin: 0 0 15px 0;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto;
+}
+
+.btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.85rem;
+  margin-right: 10px;
+}
+
+.edit-btn {
+  background-color: #3498db;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #2980b9;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.post-stats {
+  display: flex;
+  gap: 15px;
+}
+
+.post-stats span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .posts-grid {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+  
+  .post-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .post-stats {
+    width: 100;
+    justify-content: flex-end;
+  }
+}
+/* 16:9 Image Container */
+.post-image-container {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (9/16 = 0.5625) */
+  overflow: hidden;
+}
+
+.post-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This crops the image to fill the container */
+  transition: transform 0.3s ease;
+}
+
+.post-image:hover {
+  transform: scale(1.05);
+}
